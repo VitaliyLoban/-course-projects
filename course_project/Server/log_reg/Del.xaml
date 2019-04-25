@@ -1,0 +1,76 @@
+﻿<Page x:Class="log_reg.Del"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      xmlns:local="clr-namespace:log_reg"
+            xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+
+      mc:Ignorable="d" 
+      d:DesignHeight="687" d:DesignWidth="1118"
+      Title="Del" Loaded="Page_Loaded">
+
+    <Grid>
+        <ScrollViewer Margin="0,235,314,0">
+            <WrapPanel Name="stack"></WrapPanel>
+        </ScrollViewer>
+        <Label  Content="Имя" HorizontalAlignment="Left" Height="34" Margin="10,24,0,0" VerticalAlignment="Top" Width="102" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14"/>
+        <TextBox Name="f_name" HorizontalAlignment="Left" Height="34" Margin="117,25,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="221" VerticalContentAlignment="Center" FontSize="14"/>
+        <Button  Content="Найти" HorizontalAlignment="Left" Height="34" Margin="140,180,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Height="34" Margin="10,63,0,0" VerticalAlignment="Top" Width="102" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14"/>
+        <TextBox Name="f_sname" HorizontalAlignment="Left" Height="34" Margin="117,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="221" VerticalContentAlignment="Center" FontSize="14"/>
+        <Label Content="№ комнаты" HorizontalAlignment="Left" Height="34" Margin="10,102,0,0" VerticalAlignment="Top" Width="102" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14"/>
+        <xctk:IntegerUpDown Name="num_r" Minimum="200" Maximum="499"   HorizontalAlignment="Left" Height="34" Margin="117,102,0,0" VerticalAlignment="Top" Width="126" />
+        <CheckBox x:Name="h1" Content="Баскетбол" HorizontalAlignment="Left" Height="21" Margin="446,64,0,0" VerticalAlignment="Top" Width="115"/>
+        <CheckBox x:Name="h2"  Content="Футбол" HorizontalAlignment="Left" Height="21" Margin="446,104,0,0" VerticalAlignment="Top" Width="115"/>
+        <CheckBox x:Name="h3" Content="Волейбол" HorizontalAlignment="Left" Height="21" Margin="446,24,0,0" VerticalAlignment="Top" Width="115"/>
+        <CheckBox x:Name="h4" Content="Игра на гитаре" HorizontalAlignment="Left" Height="21" Margin="566,64,0,0" VerticalAlignment="Top" Width="115"/>
+        <CheckBox x:Name="h5" Content="Вокал" HorizontalAlignment="Left" Height="21" Margin="566,104,0,0" VerticalAlignment="Top" Width="115"/>
+        <CheckBox x:Name="h6" Content="Танцы" HorizontalAlignment="Left" Height="21" Margin="566,24,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Content="Другое :" HorizontalAlignment="Left" Height="32" Margin="446,130,0,0" VerticalAlignment="Top" Width="71"/>
+        <TextBox Name="h7" HorizontalAlignment="Left" Height="32" Margin="522,130,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134" VerticalContentAlignment="Center"/>
+        <Button Content="Найти" HorizontalAlignment="Left" Height="34" Margin="538,180,0,0" VerticalAlignment="Top" Width="103" Click="Button1_Click"/>
+        <Border BorderBrush="#FFEEE8E1" BorderThickness="1" HorizontalAlignment="Left" Height="235" VerticalAlignment="Top" Width="402">
+        </Border>
+        <Border BorderBrush="#FFEEE8E1" BorderThickness="1" HorizontalAlignment="Left" Height="235" Margin="402,0,0,0" VerticalAlignment="Top" Width="402"/>
+        <Label Name="fio" HorizontalAlignment="Left" Height="35" Margin="809,10,0,0" VerticalAlignment="Top" Width="299" FontSize="18" FontFamily="Times New Roman"/>
+        <Label Content="Room № :" HorizontalAlignment="Left" Height="33" Margin="809,50,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Name="room_num" HorizontalAlignment="Left" Height="33" Margin="876,50,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label Content="Birthday :" HorizontalAlignment="Left" Height="33" Margin="809,83,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label Name="birth" HorizontalAlignment="Left" Height="33" Margin="876,83,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label Content="reciept date :" HorizontalAlignment="Left" Height="33" Margin="809,118,0,0" VerticalAlignment="Top" Width="85"/>
+        <Label Name="reciept" HorizontalAlignment="Left" Height="33" Margin="899,118,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Hobies :" HorizontalAlignment="Left" Height="33" Margin="809,202,0,0" VerticalAlignment="Top" Width="85"/>
+        <TextBlock Name="hobb" HorizontalAlignment="Left" Height="103" Margin="899,207,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="196"/>
+        <Label Content="Phone number:" HorizontalAlignment="Left" Height="33" Margin="809,156,0,0" VerticalAlignment="Top" Width="107"/>
+        <Label Name="phone" HorizontalAlignment="Left" Height="33" Margin="916,156,0,0" VerticalAlignment="Top" Width="179"/>
+        <Border BorderBrush="#FFE2DADA" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="820,455,0,0" VerticalAlignment="Top" Width="288"/>
+        <Label Content="Часов отработано" HorizontalAlignment="Left" Height="33" Margin="818,310,0,0" VerticalAlignment="Top" Width="118" RenderTransformOrigin="0.542,4.606"/>
+        <Label Name="hours" HorizontalAlignment="Left" Height="33" Margin="954,310,0,0" VerticalAlignment="Top" Width="43" HorizontalContentAlignment="Right"/>
+        <Label Content="26" HorizontalAlignment="Left" Height="33" Margin="1026,310,0,0" VerticalAlignment="Top" Width="43"/>
+        <Label Content="из" HorizontalAlignment="Left" Height="33" Margin="1002,310,0,0" VerticalAlignment="Top" Width="24"/>
+        <Label Content="Оотработано +" HorizontalAlignment="Left" Height="33" Margin="804,474,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.542,4.606"/>
+        <xctk:IntegerUpDown Name="num_hour" Value="1" Minimum="1" Maximum="3"   HorizontalAlignment="Left" Height="23" Margin="899,474,0,0" VerticalAlignment="Top" Width="46" />
+        <Label Content="час(а)" HorizontalAlignment="Left" Height="33" Margin="950,474,0,0" VerticalAlignment="Top" Width="47"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Height="23" Margin="997,474,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_1"/>
+        <Label Content="Участие :" HorizontalAlignment="Left" Height="33" Margin="820,343,0,0" VerticalAlignment="Top" Width="74"/>
+
+        <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto" Name="aktiv_list" HorizontalAlignment="Left" Height="103" Margin="894,343,0,0"   VerticalAlignment="Top" Width="196"/>
+
+        <Border BorderBrush="#FFE2DADA" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="818,512,0,0" VerticalAlignment="Top" Width="288"/>
+
+        <Label Content="Добавить участие" HorizontalAlignment="Left" Height="33" Margin="804,518,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.542,4.606"/>
+        <TextBox Name="activ" HorizontalAlignment="Left" Height="24" Margin="921,522,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148"/>
+        <Label Content="Дата" HorizontalAlignment="Left" Height="33" Margin="804,551,0,0" VerticalAlignment="Top" Width="41" RenderTransformOrigin="0.542,4.606"/>
+        <DatePicker Name="date_act"  Width="118" Height="25" HorizontalAlignment="Left" VerticalAlignment="top" Margin="856,552,0,0"></DatePicker>
+        <Button Content="Добавить" HorizontalAlignment="Left" Height="25" Margin="997,552,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_2"/>
+        <Border BorderBrush="#FFE2DADA" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="818,589,0,0" VerticalAlignment="Top" Width="288"/>
+        <Button Content="Удалить пользователя" HorizontalAlignment="Left" Height="53" Margin="813,607,0,0" VerticalAlignment="Top" Width="132" Click="Button_Click_3"/>
+        <Image Stretch="Uniform" Name="check_user" HorizontalAlignment="Left" Height="100" Margin="979,45,0,0" VerticalAlignment="Top" Width="111"/>
+        <Border BorderBrush="#FFE2DADA" BorderThickness="1" HorizontalAlignment="Left" Height="97" Margin="960,590,0,0" VerticalAlignment="Top" Width="1"/>
+        <Button Content="Удалить всех" HorizontalAlignment="Left" Height="53" Margin="974,607,0,0" VerticalAlignment="Top" Width="132" Click="del_all"/>
+
+    </Grid>
+</Page>

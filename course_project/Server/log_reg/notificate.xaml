@@ -1,0 +1,25 @@
+﻿<Page x:Class="log_reg.notificate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:log_reg"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+
+      mc:Ignorable="d"  
+      d:DesignHeight="687" d:DesignWidth="1118"
+      Title="Note">
+
+    <Grid>
+        <Label Content="Сообщение :" HorizontalAlignment="Left" Height="40" Margin="28,28,0,0" VerticalAlignment="Top" Width="134" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="142" Margin="167,28,0,0" 
+                 TextWrapping="Wrap"  
+                 Name="mes"
+                 VerticalAlignment="Top" Width="431"/>
+        <Label Content="Дата :" HorizontalAlignment="Left" Height="40" Margin="28,192,0,0" VerticalAlignment="Top" Width="134" FontSize="16"/>
+        <!--<DatePicker   Name="date_take" HorizontalAlignment="Left" Height="24" Margin="167,197,0,0" VerticalAlignment="Top" Width="181" SelectedDateFormat="Long"/>-->
+        <Button Content="Add" HorizontalAlignment="Left" Height="48" Margin="167,318,0,0" VerticalAlignment="Top" Width="147" Click="Button_Click"/>
+        <xctk:DateTimePicker UpdateValueOnEnterKey="True" Name="date_take" Format="UniversalSortableDateTime" HorizontalAlignment="Left" Height="24" Margin="167,197,0,0" VerticalAlignment="Top" Width="181" ></xctk:DateTimePicker>
+    </Grid>
+</Page>
